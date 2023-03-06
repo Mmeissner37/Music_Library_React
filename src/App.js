@@ -14,9 +14,10 @@ function App() {
   }, []);
 
   async function getAllSongs(){
-    const response = await axios.get('http://127.0.0.1:8000/api/music/');
-    console.log(response.data);
-    setSongs(response.data)
+    const response = await axios.get('http://127.0.0.1:8000/api/music/', getAllSongs);
+    if (response.status === 201) {
+      await getAllSongs();
+    };
   }
 
 
@@ -33,7 +34,7 @@ function App() {
         </div>
         <div className='get-songs'>
           <GetSongs parentEntries={songs} />
-          <button onClick={() => getAllSongs()}>Get All Songs</button>
+          <button onClick={() => getAllSongs()}>Show Me the Mewsic!</button>
         </div>
         </div>
       </div>
