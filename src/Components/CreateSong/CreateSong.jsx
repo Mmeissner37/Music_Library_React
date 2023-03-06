@@ -5,6 +5,11 @@ import axios from 'axios';
 const CreateSong = (props) => {
 
     const [songs, createSong] = useState([]);
+    const [title, setTitle] = useState('');
+    const [artist, setArist] = useState('');
+    const [album, setAlbum] = useState('');
+    const [release, setRelease] = useState(0);
+    const [genre, setGenre] = useState(''); 
 
     useEffect(() => {
         createNewSong();
@@ -25,15 +30,15 @@ const CreateSong = (props) => {
         <form onSubmit={handleSubmit} className='new-song'>
             <h3 className='new-song'>Create Mew Song: </h3>
             <label className='song-form'>Title: </label>
-            <input type='text' value='' /><br></br>
+            <input type='text' value={title} /><br></br>
             <label className='song-form'>Arist: </label>
-            <input type='text' value ='' /><br></br>
+            <input type='text' value ={artist} /><br></br>
             <label className='song-form'>Album: </label>
-            <input type='text' value='' /><br></br>
+            <input type='text' value={album} /><br></br>
             <label className='song-form'>Release Date: </label>
-            <input type='date' value='' /><br></br>
+            <input type='date' value={release} /><br></br>
             <label className='song-form'>Genre: </label>
-            <input type='text' value='' /><br></br>
+            <input type='text' value={genre} /><br></br>
             <button type='submit'>Create Song</button>
         </form>
      );

@@ -7,6 +7,8 @@ import './App.css';
 
 function App() {
 
+  const [songs, setSongs] = useState([]);
+
   useEffect(() => {
     getAllSongs();
   }, []);
@@ -30,7 +32,7 @@ function App() {
 
         </div>
         <div className='get-songs'>
-          <GetSongs parentEntries={song} />
+          <GetSongs parentEntries={songs} />
           <button onClick={() => getAllSongs()}>Get All Songs</button>
         </div>
         </div>
