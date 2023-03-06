@@ -11,7 +11,7 @@ const CreateSong = (props) => {
     }, []); 
     
     async function createNewSong() {
-        const response = await axios.put('http://127.0.0.1:8000/api/music/');
+        const response = await axios.post('http://127.0.0.1:8000/api/music/');
         console.log(response.data);
         createSong(response.data);
     }
@@ -23,7 +23,7 @@ const CreateSong = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit} className='new-song'>
-            <h3>Create New Song: </h3>
+            <h3 className='new-song'>Create Mew Song: </h3>
             <label className='song-form'>Title: </label>
             <input type='text' value='' /><br></br>
             <label className='song-form'>Arist: </label>

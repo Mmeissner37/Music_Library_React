@@ -1,7 +1,17 @@
-
-h1 {
+.NavBar {
+    background-color: rgb(131, 225, 241);
+    margin: auto;
+    padding: 0.5rem;
     text-align: center;
-
 }
 
+.whole-page {
+    background-image: url(https://png.pngtree.com/background/20210711/original/pngtree-simple-fresh-music-poster-background-picture-image_1097526.jpg);
+    height: 100hv;
+    padding-left: 1rem;
+    padding-top: 0.5em;
+    padding-bottom: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
