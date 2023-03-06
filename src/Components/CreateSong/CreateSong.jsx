@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-const CreateSong = (props) => {
-    //const [songs, setSong] = useState([]);
+const CreateSong = ({getAllSongs}) => {
+    //const [songs, setSongs] = useState([]);
     const [title, setTitle] = useState('');
     const [artist, setArtist] = useState('');
     const [album, setAlbum] = useState('');
@@ -16,21 +16,16 @@ const CreateSong = (props) => {
             title: title,
             artist: artist, 
             album: album,
-            release: release,
+            release_date: release,
             genre: genre,
         }
-
+        createSong(newSong)
     }
 
-    useEffect(() => {
-        createSong();
-    }, []); 
-    
+ 
     async function createSong(newSong) {
-        let response = await axios.post('http://127.0.0.1:8000/api/music/', createSong);
-        if(response.status === 201) {
-            await createSong();
-        };
+        let response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
+        getAllSongs()
     }
 
     return ( 

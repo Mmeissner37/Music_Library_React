@@ -14,10 +14,11 @@ function App() {
   }, []);
 
   async function getAllSongs(){
-    const response = await axios.get('http://127.0.0.1:8000/api/music/', getAllSongs);
-    if (response.status === 201) {
-      await getAllSongs();
-    };
+    const response = await axios.get('http://127.0.0.1:8000/api/music/');
+    // if (response.status === 201) {
+    //   await getAllSongs();
+    // };
+    setSongs(response.data)
   }
 
 
@@ -27,7 +28,7 @@ function App() {
         <NavBar />
       <div className='whole-page'>
         <div className='create-form'>
-          <CreateSong />
+          <CreateSong getAllSongs={getAllSongs}/>
         </div>
         <div className='search-song'> 
 
