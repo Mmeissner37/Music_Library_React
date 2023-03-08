@@ -15,3 +15,10 @@
     background-repeat: no-repeat;
 }
 
+.song-presenter {
+    text-decoration: none; 
+}
+
+.get-songs {
+    box-sizing: auto;
+}

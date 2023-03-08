@@ -6,7 +6,7 @@ import GetSongs from './Components/GetSongs/GetSongs';
 import './App.css';
 
 function App() {
-
+  
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
@@ -34,8 +34,8 @@ function App() {
 
         </div>
         <div className='get-songs'>
-          <GetSongs parentEntries={songs} />
-          <button onClick={() => getAllSongs()}>Show Me the Mewsic!</button>
+        <GetSongs parentEntries={songs} />
+
         </div>
         </div>
       </div>

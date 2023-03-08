@@ -1,5 +1,6 @@
 import React from 'react';
 import SongPresenter from '../SongPresenter';
+import MusicButton from '../MusicButton';
 
 const GetSongs = (props) => {
     // const [song, setSongs] = useState([]);
@@ -19,14 +20,15 @@ const GetSongs = (props) => {
     return (
         <div>
             <h3 className='get-song'>All The Mewsic</h3>
-            {props.parentEntries.filter(song => ).map(song => <SongPresenter song={song} key={song.id}/>)}
+            <MusicButton />
+            {props.parentEntries.map(song => <SongPresenter song={song} key={song.id}/>)}
         </div>
       )
-}
+} 
 export default GetSongs;
 
 
 
-
+//            {props.parentEntries.filter(song => ).map(song => <SongPresenter song={song} key={song.id}/>)}
 
 

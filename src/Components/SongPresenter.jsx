@@ -1,6 +1,6 @@
-const SongPresenter = ({song, name1}) => {
+const SongPresenter = ({song}) => {
   return (
-    <ul>
+    <ul className="song-presenter">
       <li>Title: {song.title}</li>
       <li>Artist: {song.artist}</li>
       <li>Album: {song.album}</li>
