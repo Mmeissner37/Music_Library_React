@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar/NavBar';
 import CreateSong from './Components/CreateSong/CreateSong';
 import GetSongs from './Components/GetSongs/GetSongs';
 import './App.css';
+import SearchSong from './Components/SearchSong';
 
 function App() {
   
@@ -31,7 +32,7 @@ function App() {
           <CreateSong getAllSongs={getAllSongs}/>
         </div>
         <div className='search-song'> 
-
+          <SearchSong />
         </div>
         <div className='get-songs'>
         <GetSongs parentEntries={songs} />
