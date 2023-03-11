@@ -22,3 +22,12 @@
 .get-songs {
     box-sizing: auto;
 }
+
+.col-md-6 {
+    padding: 2rem;
+}
+
+.search-song {
+    padding-bottom: 2rem;
+}
+

@@ -23,10 +23,10 @@ const SearchSong = ({searchForSong}) => {
 
     return ( 
         <div>
-            <h3>Search for songs</h3>
+            <h3>Search for Meowsterpieces</h3>
             <form>
                 <input type='text' />
-                
+
             </form>
         </div>
         
@@ -42,7 +42,7 @@ export default SearchSong;
 
 // {filterSong.filter(song => 
 //     song.includes(song.title)).map(song => <SongPresenter song={song} key={song.id}/>)}
-// <button onClick={searchForSong}>Search</button>
+
 
 
 

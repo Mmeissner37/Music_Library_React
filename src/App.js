@@ -6,6 +6,7 @@ import GetSongs from './Components/GetSongs/GetSongs';
 import './App.css';
 import SearchSong from './Components/SearchSong';
 
+
 function App() {
   
   const [songs, setSongs] = useState([]);
@@ -24,20 +25,25 @@ function App() {
 
 
   return (
-    <div>
-      <div className='nav-bar'>
-        <NavBar />
+    <div className='container-fluid'>
       <div className='whole-page'>
-        <div className='create-form'>
-          <CreateSong getAllSongs={getAllSongs}/>
-        </div>
-        <div className='search-song'> 
-          <SearchSong />
-        </div>
-        <div className='get-songs'>
-        <GetSongs parentEntries={songs} />
-
-        </div>
+      <div className='nav-bar'>
+              <NavBar />
+            </div>
+        <div className='row'>
+          <div className='col-md-6'>
+            <div className='create-form'>
+              <CreateSong getAllSongs={getAllSongs}/>
+            </div>
+          </div>
+          <div className='col-md-6'>
+            <div className='search-song'> 
+              <SearchSong parentEntries={songs}/>
+            </div>
+            <div className='get-songs'>
+              <GetSongs parentEntries={songs} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
