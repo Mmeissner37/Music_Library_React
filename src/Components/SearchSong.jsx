@@ -1,9 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import SongPresenter from "./SongPresenter/SongPresenter";
+
+
 
 
 const SearchSong = ({searchForSong}) => {
-    //const [userInput] = useState([])
+    // const [song, setSongs] = useState([]);
+    // const [title, setTitle] = useState([]);
+    // useEffect(() => {
+        // searchForSong();
+    // })
     
     function handleSubmit(event) {
         event.preventDefault();
@@ -15,9 +22,13 @@ const SearchSong = ({searchForSong}) => {
     }
 
     return ( 
-        <form>
-            <input type='search' />
-        </form>
+        <div>
+            <h3>Search for songs</h3>
+            <form>
+                <input type='text' />
+                
+            </form>
+        </div>
         
         // <form onSubmit={handleSubmit}>
         //     <label className="search">Search</label>
@@ -28,6 +39,21 @@ const SearchSong = ({searchForSong}) => {
 }
  
 export default SearchSong;
+
+// {filterSong.filter(song => 
+//     song.includes(song.title)).map(song => <SongPresenter song={song} key={song.id}/>)}
+// <button onClick={searchForSong}>Search</button>
+
+
+
+
+
+// <div>
+// <h3 className='get-song'>All The Mewsic</h3>
+// <MusicButton />
+// {props.parentEntries.map(song => <SongPresenter song={song} key={song.id}/>)}
+// </div>
+
 
 
 // // import React, { useState, useEffect } from 'react';

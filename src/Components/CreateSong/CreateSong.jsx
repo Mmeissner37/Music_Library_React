@@ -40,7 +40,7 @@ const CreateSong = ({getAllSongs}) => {
             <input type='date' value={release} onChange={(event) => setRelease(event.target.value)}/><br></br>
             <label className='song-form'>Genre: </label>
             <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/><br></br>
-            <button type='submit'>Add Purrfection!</button>
+            <button type='submit' onClick={getAllSongs}>Add Purrfection!</button>
         </form>
      );
 }
