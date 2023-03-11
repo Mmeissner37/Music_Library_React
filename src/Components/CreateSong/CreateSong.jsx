@@ -29,7 +29,7 @@ const CreateSong = ({getAllSongs}) => {
 
     return ( 
         <form onSubmit={handleSubmit} className='new-song'>
-            <h3 className='new-song'>Let's Make Mew Song: </h3>
+            <h3 className='new-song'>Let's Make Mewsic Together! </h3>
             <label className='song-form'>Title:</label>
             <input type='text' value={title} onChange={(event) => setTitle(event.target.value)}/><br></br>
             <label className='song-form'>Arist: </label>
@@ -40,6 +40,7 @@ const CreateSong = ({getAllSongs}) => {
             <input type='date' value={release} onChange={(event) => setRelease(event.target.value)}/><br></br>
             <label className='song-form'>Genre: </label>
             <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/><br></br>
+            <br></br>
             <button type='submit'>Add Purrfection!</button>
         </form>
      );

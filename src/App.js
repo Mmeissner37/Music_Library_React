@@ -10,6 +10,7 @@ import SearchSong from './Components/SearchSong';
 function App() {
   
   const [songs, setSongs] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
 
   useEffect(() => {
     getAllSongs();
@@ -38,10 +39,12 @@ function App() {
           </div>
           <div className='col-md-6'>
             <div className='search-song'> 
-              <SearchSong parentEntries={songs}/>
+              <SearchSong searchTitle={songs}/>
             </div>
             <div className='get-songs'>
-              <GetSongs parentEntries={songs} />
+              <div row justify-content-center>
+                <GetSongs parentEntries={songs} />
+              </div>
             </div>
           </div>
         </div>
