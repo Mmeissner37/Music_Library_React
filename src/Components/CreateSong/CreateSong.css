@@ -1,4 +1,15 @@
 .song-form {
     padding: 0.30rem;
-    margin-left: 10px;
+    margin-left: 50px;
+    color: white;
+}
+
+.button-createsong {
+    color: white;
+}
+
+.button-createsong:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
 }

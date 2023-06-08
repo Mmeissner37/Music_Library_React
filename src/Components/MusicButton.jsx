@@ -15,7 +15,10 @@ const MusicButton = (props) => {
     }
 
     return ( 
-        <button onClick={() => getAllSongs()}>Show Me the Mewsic!</button>
+        <div>
+            <button className='musicbutton' onClick={() => getAllSongs()}>Show Me the Mewsic!</button>
+        </div>
+
     );
 }
  

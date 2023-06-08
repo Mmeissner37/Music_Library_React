@@ -12,13 +12,15 @@ const SearchSong = ({filterSongs}) => {
 
     return ( 
         <div>
-            <h3>Search Meowsterpieces</h3>
+            <div className="search-header">
+                <h3>Search Meowsterpieces</h3>
+            </div>
             <div className="search-song">
                 <form onSubmit={handleSubmit}>
                     <label className="search">Search</label>
                     <input onChange={(event)=> setSearchInput(event.target.value)} type='text' placeholder="Search Songs" /><br></br>
                     <br></br>
-                    <button type='submit'>Find the Toebeans</button>
+                    <button className="searchbutton" type='submit'>Find the Toebeans</button>
                 </form>
             </div>
 

@@ -6,11 +6,8 @@
 }
 
 .whole-page {
-    background-image: url(https://png.pngtree.com/background/20210711/original/pngtree-simple-fresh-music-poster-background-picture-image_1097526.jpg);
-    height: auto;
-    padding-left: 1rem;
-    padding-top: 0.5em;
-    padding-bottom: 1rem;
+    background-image: url(https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29575.jpg?w=826&t=st=1686266622~exp=1686267222~hmac=9eac7986552207643d10c03274b2817d66b7388db509926e6268eec8c5268714);
+    padding-top: 1rem;
     background-size: 100%;
     background-repeat: repeat;
 }
@@ -33,6 +30,20 @@
 .search-song {
     padding: 0.5rem 0.25rem ;
     margin-left: 10px;
+    color: white;
 }
 
+.search-header {
+    color: white;
+}
+
+.searchbutton {
+    color: white;
+}
+
+.searchbutton:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
 

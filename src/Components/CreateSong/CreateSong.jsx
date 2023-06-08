@@ -42,7 +42,7 @@ const CreateSong = ({getAllSongs}) => {
                 <label className='song-form'>Genre: </label>
                 <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/><br></br>
                 <br></br>
-                <button type='submit'>Add Purrfection!</button>
+                <button className='button-createsong' type='submit'>Add Purrfection!</button>
             </div>
         </form>
      );
