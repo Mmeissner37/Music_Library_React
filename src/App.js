@@ -10,7 +10,6 @@ import SearchSong from './Components/SearchSong';
 function App() {
   
   const [songs, setSongs] = useState([]);
-  const [searchTitle, setSearchTitle] = useState("");
 
   useEffect(() => {
     getAllSongs();
@@ -18,19 +17,24 @@ function App() {
 
   async function getAllSongs(){
     const response = await axios.get('http://127.0.0.1:8000/api/music/');
-    // if (response.status === 201) {
-    //   await getAllSongs();
-    // };
     setSongs(response.data)
   }
 
+  function filterSongs(searchInput){
+    let filteredResults = songs.filter((el)=>{
+      if (el.title.includes(searchInput)) {
+        return true;
+      }
+    });
+    setSongs(filteredResults)
+  }
 
   return (
     <div className='container-fluid'>
       <div className='whole-page'>
-      <div className='nav-bar'>
-              <NavBar />
-            </div>
+        <div className='nav-bar'>
+            <NavBar />
+          </div>
         <div className='row'>
           <div className='col-md-6'>
             <div className='create-form'>
@@ -39,7 +43,7 @@ function App() {
           </div>
           <div className='col-md-6'>
             <div className='search-song'> 
-              <SearchSong searchTitle={songs}/>
+              <SearchSong filterSongs={filterSongs}/>
             </div>
             <div className='get-songs'>
               <div row justify-content-center>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './CreateSong.css'
 
 const CreateSong = ({getAllSongs}) => {
     const [songs, setSongs] = useState([]);
@@ -29,19 +29,21 @@ const CreateSong = ({getAllSongs}) => {
 
     return ( 
         <form onSubmit={handleSubmit} className='new-song'>
-            <h3 className='new-song'>Let's Make Mewsic Together! </h3>
-            <label className='song-form'>Title:</label>
-            <input type='text' value={title} onChange={(event) => setTitle(event.target.value)}/><br></br>
-            <label className='song-form'>Arist: </label>
-            <input type='text' value ={artist} onChange={(event) => setArtist(event.target.value)}/><br></br>
-            <label className='song-form'>Album: </label>
-            <input type='text' value={album} onChange={(event) => setAlbum(event.target.value)}/><br></br>
-            <label className='song-form'>Release Date: </label>
-            <input type='date' value={release} onChange={(event) => setRelease(event.target.value)}/><br></br>
-            <label className='song-form'>Genre: </label>
-            <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/><br></br>
-            <br></br>
-            <button type='submit'>Add Purrfection!</button>
+            <div className='song-form'>
+                <h3 className='new-song'>Let's Make Mewsic Together!</h3>
+                <label className='song-form'>Title: </label>
+                <input type='text' value={title} onChange={(event) => setTitle(event.target.value)}/><br></br>
+                <label className='song-form'>Artist: </label>
+                <input type='text' value ={artist} onChange={(event) => setArtist(event.target.value)}/><br></br>
+                <label className='song-form'>Album: </label>
+                <input type='text' value={album} onChange={(event) => setAlbum(event.target.value)}/><br></br>
+                <label className='song-form'>Release Date: </label>
+                <input type='date' value={release} onChange={(event) => setRelease(event.target.value)}/><br></br>
+                <label className='song-form'>Genre: </label>
+                <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/><br></br>
+                <br></br>
+                <button type='submit'>Add Purrfection!</button>
+            </div>
         </form>
      );
 }

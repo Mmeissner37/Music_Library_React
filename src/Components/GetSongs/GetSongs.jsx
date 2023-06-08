@@ -1,6 +1,7 @@
 import React from 'react';
 import SongPresenter from '../SongPresenter/SongPresenter';
 import MusicButton from '../MusicButton';
+import './GetSongs.css'
 
 const GetSongs = (props) => {
     // const [song, setSongs] = useState([]);
@@ -19,8 +20,10 @@ const GetSongs = (props) => {
     return (
         <div>
             <h3 className='get-song'>All The Mewsic</h3>
-            <MusicButton />
-            {props.parentEntries.map(song => <SongPresenter song={song} key={song.id}/>)}
+            <div className='show-songs'>
+                <MusicButton />
+                {props.parentEntries.map(song => <SongPresenter song={song} key={song.id}/>)}
+            </div>
         </div>
       )
 } 

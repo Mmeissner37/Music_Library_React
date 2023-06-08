@@ -10,10 +10,7 @@ const MusicButton = (props) => {
     }, []);
 
     async function getAllSongs(){
-        const response = await axios.get('http://127.0.0.1:8000/api/music/');
-    // if (response.status === 201) {
-    //   await getAllSongs();
-    // };
+        let response = await axios.get('http://127.0.0.1:8000/api/music/');
         setSongs(response.data)
     }
 

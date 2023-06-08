@@ -1,0 +1,5 @@
+.show-songs {
+    overflow: auto;
+    max-height: 400px;
+    padding: 1rem;
+}
